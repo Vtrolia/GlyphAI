@@ -52,7 +52,6 @@ class Listener(object):
         if "gliff" in self.text or "cliff" in self.text:
             h.play_glyph_in("in")
             vm.say(h.proper_greeting() + " How can I help you?", v_engine)
-            print(h.proper_greeting() + " How can I help you?")
             return True
         return False
 

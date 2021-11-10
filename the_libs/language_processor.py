@@ -3,6 +3,7 @@ import joblib as j
 import sys
 import sklearn.feature_extraction.text as t
 from sklearn.linear_model import SGDClassifier as SGD
+import the_libs.helpers as h
 
 
 class LanguageProcessor(object):
@@ -30,6 +31,23 @@ class LanguageProcessor(object):
             return 2
 
         return 3
+
+    def solve_text(self, text, text_code):
+        if text_code == 0:
+            return "No input"
+        elif text_code == 1:
+            if "weather" in text:
+                weather_string = h.get_weather(h.get_location("http://ipinfo.io/json"),
+                                               "7425713b1652372ddd33a4e35976d304")
+                return weather_string
+            else:
+                return h.ask_wolfram(text)
+        elif text_code == 2:
+            return "Commands coming soon!"
+        elif text_code == 3:
+            return "Conversation coming probably never!"
+        else:
+            return "Improper format usage"
 
     @staticmethod
     def reload_model(vectorize_file, model_file, command_positive, command_negative):

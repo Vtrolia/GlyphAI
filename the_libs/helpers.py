@@ -61,3 +61,14 @@ def play_glyph_in(glyph_sound):
     stream.stop_stream()
     stream.close()
     pya.terminate()
+
+
+def ask_wolfram(question):
+    new_question = question + "%3F"
+    new_question = question.replace(" ", "+")
+
+    data = urllib.request.urlopen("https://api.wolframalpha.com/v1/result?i=" +
+                                  new_question + "&timeout=10%&appid=EJAAAJ-K43K732TQR")
+
+    return str(data.read())
+

@@ -42,16 +42,21 @@ def main():
     while True:
         if word_parser.check_for_greeting(voice_engine):
             cur_text = word_parser.read_command()
-            print(language_processor.eval_text(cur_text))
+            code = language_processor.eval_text(cur_text)
+            if code == 0:
+                voice.say("You didn't say anything! Goodbye", voice_engine)
+            elif code == 1:
+                voice.say("Let me check that for you.", voice_engine)
+                voice.say(language_processor.solve_text(cur_text, 1), voice_engine)
+            elif code == 2:
+                voice.say("Right away", voice_engine)
+                voice.say(language_processor.solve_text(cur_text, 2), voice_engine)
+            elif code == 3:
+                voice.say(language_processor.solve_text(cur_text, 3), voice_engine)
+            else:
+                voice.say("Error in reading text", voice_engine)
         else:
             continue
-
-        if "weather" in cur_text:
-            voice.say("Ok, I'll check the weather for you. One moment please.", voice_engine)
-            print("Ok, I'll check the weather for you:\n")
-            weather_string = h.get_weather(h.get_location("http://ipinfo.io/json"), "7425713b1652372ddd33a4e35976d304")
-            print(weather_string)
-            voice.say(weather_string, voice_engine)
 
 
 # Press the green button in the gutter to run the script.
