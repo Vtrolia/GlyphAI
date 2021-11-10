@@ -1,0 +1,63 @@
+import random
+import time
+import urllib.request
+import json
+import wave
+import pyaudio
+
+
+def proper_greeting():
+    chance = random.randint(1, 5)
+    if chance > 4:
+        return "What's up, Dude?"
+    else:
+        time_now = int(time.strftime("%H"))
+        if time_now < 12:
+            return "Good Morning!"
+        elif time_now == 12 or time_now < 18:
+            return "Good Afternoon!"
+        else:
+            return "Good Evening"
+
+
+def get_location(site):
+    data = urllib.request.urlopen(site)
+    json_obj = json.load(data)
+    return json_obj['loc'].split(",")
+
+
+def get_weather(location, api_key):
+    weather_string = "https://api.openweathermap.org/data/2.5/" \
+                     "onecall?lat=" + location[0] + "&lon=" + location[1] + \
+                     "&exclude=minutely,hourly,alerts&units=imperial&appid=" + api_key
+    weather_data = urllib.request.urlopen(weather_string)
+    json_weather = json.load(weather_data)
+    return "Right now it is " + str(json_weather["current"]["temp"]) + " degrees with a wind of " + \
+           str(json_weather["current"]["wind_speed"]) + " miles per hour, with " + \
+           json_weather["current"]["weather"][0]["description"] + ". Today's high is " + \
+           str(json_weather["daily"][0]["temp"]["max"]) + " degrees with a low of " + \
+           str(json_weather["daily"][0]["temp"]["morn"]) + " with " + \
+           json_weather["daily"][0]["weather"][0]["description"] + "."
+
+
+def play_glyph_in(glyph_sound):
+    if glyph_sound == "in":
+        glyph_in = wave.open("the_libs/lib_resources/Glyph In.wav", "rb")
+
+    elif glyph_sound == "out":
+        glyph_in = wave.open("the_libs/lib_resources/gylph out.wav", "rb")
+    else:
+        return
+    pya = pyaudio.PyAudio()
+    stream = pya.open(format=pya.get_format_from_width((glyph_in.getsampwidth())),
+                      channels=2,
+                      rate=glyph_in.getframerate(),
+                      output=True)
+    stream.start_stream()
+    data = glyph_in.readframes(512)
+    while data:
+        stream.write(data)
+        data = glyph_in.readframes(512)
+    stream.stop_stream()
+    stream.close()
+    pya.terminate()
