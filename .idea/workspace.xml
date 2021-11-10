@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b0f5561-462b-4b3d-8a52-060d0bd77f9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/helpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/language_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/language_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_t.txt" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_t.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/speech_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/speech_recognition.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
       <recent name="$PROJECT_DIR$/the_libs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.helpers">
     <configuration name="helpers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Glyph2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -283,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636512623684</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="basic processing of commands and conversations, with the ability to answer questions">
+      <created>1636587137830</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636587137830</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -300,6 +302,7 @@
     <MESSAGE value="added the ability to get a text readout of text typecodes" />
     <MESSAGE value="removed unneeded files" />
     <MESSAGE value="redoing version control because for some reason pycharm feels that &quot;git rm&quot; isn't something thats needed fuck you" />
-    <option name="LAST_COMMIT_MESSAGE" value="redoing version control because for some reason pycharm feels that &quot;git rm&quot; isn't something thats needed fuck you" />
+    <MESSAGE value="basic processing of commands and conversations, with the ability to answer questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic processing of commands and conversations, with the ability to answer questions" />
   </component>
 </project>

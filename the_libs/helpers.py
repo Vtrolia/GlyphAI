@@ -26,20 +26,6 @@ def get_location(site):
     return json_obj['loc'].split(",")
 
 
-def get_weather(location, api_key):
-    weather_string = "https://api.openweathermap.org/data/2.5/" \
-                     "onecall?lat=" + location[0] + "&lon=" + location[1] + \
-                     "&exclude=minutely,hourly,alerts&units=imperial&appid=" + api_key
-    weather_data = urllib.request.urlopen(weather_string)
-    json_weather = json.load(weather_data)
-    return "Right now it is " + str(json_weather["current"]["temp"]) + " degrees with a wind of " + \
-           str(json_weather["current"]["wind_speed"]) + " miles per hour, with " + \
-           json_weather["current"]["weather"][0]["description"] + ". Today's high is " + \
-           str(json_weather["daily"][0]["temp"]["max"]) + " degrees with a low of " + \
-           str(json_weather["daily"][0]["temp"]["morn"]) + " with " + \
-           json_weather["daily"][0]["weather"][0]["description"] + "."
-
-
 def play_glyph_in(glyph_sound):
     if glyph_sound == "in":
         glyph_in = wave.open("the_libs/lib_resources/Glyph In.wav", "rb")
@@ -72,3 +58,7 @@ def ask_wolfram(question):
 
     return str(data.read())
 
+
+while True:
+    words = input("Enter a question: ")
+    print(ask_wolfram(words))
