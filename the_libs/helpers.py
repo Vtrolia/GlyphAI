@@ -59,6 +59,3 @@ def ask_wolfram(question):
     return str(data.read())
 
 
-while True:
-    words = input("Enter a question: ")
-    print(ask_wolfram(words))
