@@ -1,16 +1,11 @@
-import pyttsx3
+import os
 
 
-def init_voice(name):
-    engine = pyttsx3.init()
-    for voice in engine.getProperty("voices"):
-        if voice.name == "Karen":
-            engine.setProperty("voice", voice.id)
-            return engine
-    return None
+def say(words):
+    return os.system("echo " + words + " | festival --tts")
 
 
-def say(words, engine):
-    engine.say(words)
-    engine.runAndWait()
-    return True
+if __name__ == "__main__":
+    while True:
+        text = input("Enter some words for me to say: ")
+        say(text)

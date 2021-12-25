@@ -1,9 +1,10 @@
 # language processor class that interprets read words and returns in integer as a meaning
+import the_libs.helpers as h
 import joblib as j
 import sys
+
 import sklearn.feature_extraction.text as t
 from sklearn.linear_model import SGDClassifier as SGD
-import the_libs.helpers as h
 
 
 class LanguageProcessor(object):

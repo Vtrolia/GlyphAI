@@ -32,7 +32,6 @@ def main():
     except getopt.GetoptError:
         return -2
 
-    voice_engine = voice.init_voice("Karen")
     word_parser = sr.Listener("the_libs/lib_resources/deepspeech-0.9.3-models.pbmm",
                               "the_libs/lib_resources/deepspeech-0.9.3-models.scorer")
     language_processor = nlp.LanguageProcessor("the_libs/lib_resources/command_vectorizer.pkl",
@@ -40,21 +39,21 @@ def main():
     print("==============Glyph Loaded==============\n")
     cur_text = ""
     while True:
-        if word_parser.check_for_greeting(voice_engine):
+        if word_parser.check_for_greeting():
             cur_text = word_parser.read_command()
             code = language_processor.eval_text(cur_text)
             if code == 0:
-                voice.say("You didn't say anything! Goodbye", voice_engine)
+                voice.say("You didn't say anything! Goodbye")
             elif code == 1:
-                voice.say("Let me check that for you.", voice_engine)
-                voice.say(language_processor.solve_text(cur_text, 1), voice_engine)
+                voice.say("Let me check that for you.")
+                voice.say(language_processor.solve_text(cur_text, 1))
             elif code == 2:
-                voice.say("Right away", voice_engine)
-                voice.say(language_processor.solve_text(cur_text, 2), voice_engine)
+                voice.say("Right away")
+                voice.say(language_processor.solve_text(cur_text, 2))
             elif code == 3:
-                voice.say(language_processor.solve_text(cur_text, 3), voice_engine)
+                voice.say(language_processor.solve_text(cur_text, 3))
             else:
-                voice.say("Error in reading text", voice_engine)
+                voice.say("Error in reading text")
         else:
             continue
 

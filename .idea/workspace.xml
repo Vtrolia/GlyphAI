@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0f5561-462b-4b3d-8a52-060d0bd77f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="4b0f5561-462b-4b3d-8a52-060d0bd77f9a" name="Default Changelist" comment="added requirements for better future portability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the_libs/language_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/language_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the_libs/speech_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/speech_recognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the_libs/voice_modulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/voice_modulator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +53,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/old_glyph" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings sdk-home="/usr/bin/python3.8">
+        <option name="mySdkHome" value="/usr/bin/python3.8" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -143,17 +159,17 @@
       <method v="2" />
     </configuration>
     <configuration name="speech_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Glyph2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/the_libs" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/the_libs/speech_recognition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -164,15 +180,15 @@
       <method v="2" />
     </configuration>
     <configuration name="voice_modulator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Glyph2" />
+      <module name="GlyphAI2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/the_libs" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/the_libs/voice_modulator.py" />
@@ -194,11 +210,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.voice_modulator" />
+        <item itemvalue="Python.speech_recognition" />
         <item itemvalue="Python.helpers" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.learn" />
-        <item itemvalue="Python.speech_recognition" />
-        <item itemvalue="Python.voice_modulator" />
       </list>
     </recent_temporary>
   </component>
@@ -288,8 +304,18 @@
       <option name="project" value="LOCAL" />
       <updated>1636587137830</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added requirements for better future portability">
+      <created>1638793067298</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638793067298</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -317,6 +343,7 @@
     <MESSAGE value="removed unneeded files" />
     <MESSAGE value="redoing version control because for some reason pycharm feels that &quot;git rm&quot; isn't something thats needed fuck you" />
     <MESSAGE value="basic processing of commands and conversations, with the ability to answer questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic processing of commands and conversations, with the ability to answer questions" />
+    <MESSAGE value="added requirements for better future portability" />
+    <option name="LAST_COMMIT_MESSAGE" value="added requirements for better future portability" />
   </component>
 </project>

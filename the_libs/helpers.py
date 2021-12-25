@@ -1,9 +1,11 @@
+import json
+import pyaudio
 import random
 import time
 import urllib.request
-import json
 import wave
-import pyaudio
+
+from datetime import date
 
 
 def proper_greeting():
@@ -58,4 +60,11 @@ def ask_wolfram(question):
 
     return str(data.read())
 
+
+def record_error(error_module, error_text):
+    current_time = time.localtime()
+    time_string = time.strftime("%H:%M:%S", current_time)
+
+    with open("glyph_errors.txt", "a") as f:
+        f.write(date.today() + ":" + time_string + ": " + error_module + " Error: " + error_text)
 
