@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0f5561-462b-4b3d-8a52-060d0bd77f9a" name="Default Changelist" comment="added requirements for better future portability">
+    <list default="true" id="4b0f5561-462b-4b3d-8a52-060d0bd77f9a" name="Default Changelist" comment="fixed up code to look better and check for errors, changed over voice modulation to festival for better sounding voice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/helpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/language_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/language_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/lib_resources/command_vectorizer.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/speech_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/speech_recognition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/the_libs/voice_modulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_libs/voice_modulator.py" afterDir="false" />
     </list>
@@ -41,6 +38,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="20QZ0XU8o9f1gKvC2btZcBB6ozL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/old_glyph" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -311,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638793067298</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed up code to look better and check for errors, changed over voice modulation to festival for better sounding voice">
+      <created>1640427971659</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1640427971659</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -344,6 +351,7 @@
     <MESSAGE value="redoing version control because for some reason pycharm feels that &quot;git rm&quot; isn't something thats needed fuck you" />
     <MESSAGE value="basic processing of commands and conversations, with the ability to answer questions" />
     <MESSAGE value="added requirements for better future portability" />
-    <option name="LAST_COMMIT_MESSAGE" value="added requirements for better future portability" />
+    <MESSAGE value="fixed up code to look better and check for errors, changed over voice modulation to festival for better sounding voice" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed up code to look better and check for errors, changed over voice modulation to festival for better sounding voice" />
   </component>
 </project>
